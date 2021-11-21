@@ -12,13 +12,16 @@
  * -----
  * HISTORY
 **/
+import React from 'react';
 import type { NextPage } from 'next'
 import { chakra } from '@chakra-ui/react';
+
+import Welcome from '@components/Welcome';
 
 const Home: NextPage = () => {
   return (
     <chakra.div>
-      
+      <Welcome />
     </chakra.div>
   );
 }
