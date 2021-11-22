@@ -11,20 +11,19 @@
  * Copyright (c) 2021 MylesWritesCode
  * -----
  * HISTORY
-***/
+ ***/
 import styles from "./Welcome.module.scss";
 import React from "react";
 import { chakra } from "@chakra-ui/react";
+import { BlockList } from "net";
 
 interface WelcomeProps {}
 
 const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
   const titleLine: string = "Hi! I'm Myles :)";
-  const skills: string[] = ["developer"];
-  
-  const typewritter = (sentences: string[]) => {
+  const skills: string[] = ["web"];
 
-  };
+  const typewritter = (sentences: string[]) => {};
 
   return (
     <chakra.div
@@ -35,10 +34,31 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       justifyContent="center"
       alignItems="center"
       backgroundColor="green.500"
+      background="linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(jeremy-thomas-unsplash.jpg)"
+      backgroundSize="cover"
+      color="white"
     >
-      <chakra.h2>{titleLine}</chakra.h2>
+      <chakra.h2
+        textTransform="uppercase"
+        letterSpacing="0.5rem"
+        fontSize="5rem"
+        fontWeight="900"
+      >
+        {titleLine}
+      </chakra.h2>
       <chakra.div display="inline-flex">
-        <chakra.p>I'm a <chakra.span>{ skills }</chakra.span></chakra.p>
+        <chakra.p
+          textTransform="uppercase"
+          letterSpacing="0.5rem"
+          fontSize="1.5rem"
+          fontWeight="400"
+        >
+          I'm a{" "}
+          <chakra.span backgroundColor="black" padding="0.20em 0.25em 0.20em 0.5em">
+            {skills}
+          </chakra.span>{" "}
+          developer
+        </chakra.p>
       </chakra.div>
     </chakra.div>
   );
