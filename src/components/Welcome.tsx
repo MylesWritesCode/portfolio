@@ -15,7 +15,6 @@
 import styles from "./Welcome.module.scss";
 import React from "react";
 import { chakra } from "@chakra-ui/react";
-import { BlockList } from "net";
 
 interface WelcomeProps {}
 
@@ -55,12 +54,13 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
           fontWeight="400"
         >
           I'm a{" "}
-          <chakra.span backgroundColor="black" marginRight="0.5em" padding="0.2rem 0.5rem">
+          <chakra.span
+            backgroundColor="black"
+            marginRight="0.5em"
+            padding="0.2rem 0.5rem"
+          >
             {skills}
-            <chakra.span
-              backgroundColor="#FFF"
-              letterSpacing="0.05em"
-            >
+            <chakra.span letterSpacing="0.05em" className={styles.cursor}>
               {" "}
             </chakra.span>
           </chakra.span>{" "}

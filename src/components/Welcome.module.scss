@@ -12,3 +12,15 @@
  * -----
  * HISTORY
 **/
+.cursor {
+  animation: blink-animation 1s step-end infinite;
+}
+
+@keyframes blink-animation {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #FFF
+  }
+}
