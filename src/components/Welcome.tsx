@@ -43,6 +43,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
         letterSpacing="0.5rem"
         fontSize="5rem"
         fontWeight="900"
+        textAlign="center"
       >
         {titleLine}
       </chakra.h2>
@@ -50,12 +51,18 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
         <chakra.p
           textTransform="uppercase"
           letterSpacing="0.5rem"
-          fontSize="1.5rem"
+          fontSize="1.5em"
           fontWeight="400"
         >
           I'm a{" "}
-          <chakra.span backgroundColor="black" padding="0.20em 0.25em 0.20em 0.5em">
+          <chakra.span backgroundColor="black" marginRight="0.5em" padding="0.2rem 0.5rem">
             {skills}
+            <chakra.span
+              backgroundColor="#FFF"
+              letterSpacing="0.05em"
+            >
+              {" "}
+            </chakra.span>
           </chakra.span>{" "}
           developer
         </chakra.p>
