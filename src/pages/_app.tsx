@@ -14,12 +14,16 @@
  **/
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
+import { chakra, ChakraProvider } from "@chakra-ui/react";
+import Menu from "@components/Menu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <Menu />
+      <chakra.div paddingLeft="4rem" maxWidth="calc(100vw-4rem)">
+        <Component {...pageProps} />
+      </chakra.div>
     </ChakraProvider>
   );
 }
