@@ -17,7 +17,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
-  --color-dark:       #272727;
+  --color-dark:       #111111;
+  --color-light-dark: #2d2c25;
   --color-red:        #DB5461;
   --color-green:      #B8D8BA;
   --color-dark-green: #136F63;
@@ -30,6 +31,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--color-light-dark);
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
