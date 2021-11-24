@@ -13,9 +13,35 @@
  * HISTORY
  **/
 import React from "react";
-import { chakra } from "@chakra-ui/react";
+import { chakra, Icon, extendTheme } from "@chakra-ui/react";
+import {} from "react-icons/fc";
+import { FaNodeJs, FaReact, FaSass } from "react-icons/fa";
+import {
+  SiApollographql,
+  SiChakraui,
+  SiExpress,
+  SiGraphql,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
 
 interface AboutMeProps {}
+
+const List = chakra(chakra.li, {
+  baseStyle: {
+    display: "flex",
+    margin: "0.5rem 0rem",
+    alignItems: "center",
+    flexBasis: "50%",
+    fontWeight: "400",
+  },
+});
+
+const theme = extendTheme({
+  components: {
+    List,
+  },
+});
 
 const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
   return (
@@ -50,18 +76,88 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             about me
           </chakra.h1>
           <chakra.p
-            flex="0 0 50%"
             fontFamily="Lato"
             fontSize="16px"
             fontWeight="400"
             text-indent="2em"
           >
-            Why hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
+            Why, hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
             dozens of new devs make the transition into tech. I made my
             transition to development in 2016, working with different languages,
-            frameworks, and libraries throughout the years. Wanting a formal
-            education, I completed my CS degree remotely
+            frameworks, and libraries throughout the years.
           </chakra.p>
+          <chakra.p
+            marginTop="1rem"
+            fontFamily="Lato"
+            fontSize="16px"
+            fontWeight="400"
+            text-indent="2em"
+          >
+            Below is a list of the tech that I've grown happy to use, but it is
+            not exhaustive. I've also worked with Ruby, C++, C#, Python, and
+            Rust, along with a few popular libraries for those languages. 
+          </chakra.p>
+          <chakra.h1
+            marginTop="1rem"
+            fontFamily="Lato"
+            fontSize="24px"
+            fontWeight="900"
+          >
+            my current preferred tech
+          </chakra.h1>
+          <chakra.div
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <chakra.ul
+              display="flex"
+              flexWrap="wrap"
+              listStylePosition="inside"
+              listStyleType="none"
+            >
+              <List>
+                <Icon as={FaReact} color="#5ADAFD" marginRight="0.5em" />
+                React
+              </List>
+              <List>
+                <Icon as={SiExpress} color="#FFFFFF" marginRight="0.5em" />
+                Express
+              </List>
+              <List>
+                <Icon as={FaNodeJs} color="#8FC43E" marginRight="0.5em" />
+                Node.js
+              </List>
+              <List>
+                <Icon as={SiGraphql} color="#E233A8" marginRight="0.5em" />
+                GraphQL
+              </List>
+              <List>
+                <Icon
+                  as={SiApollographql}
+                  color="#FFFFFF"
+                  marginRight="0.5em"
+                />
+                Apollo
+              </List>
+              <List>
+                <Icon as={SiNextdotjs} color="#FFFFFF" marginRight="0.5em" />
+                Next.js
+              </List>
+              <List>
+                <Icon as={SiChakraui} color="#FFFFFF" marginRight="0.5em" />
+                Chakra UI
+              </List>
+              <List>
+                <Icon as={FaSass} color="#CA6496" marginRight="0.5em" />
+                SASS/SCSS
+              </List>
+              <List>
+                <Icon as={SiTypescript} color="#2F74C0" marginRight="0.5em" />
+                Typescript
+              </List>
+            </chakra.ul>
+          </chakra.div>
         </chakra.div>
         <chakra.div
           display="flex"
