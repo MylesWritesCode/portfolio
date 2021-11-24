@@ -67,7 +67,9 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
       background="var(--color-dark)"
       color="#FFFFFF"
     >
-      <chakra.div display="flex" flexDirection="column"></chakra.div>
+      <chakra.div display="flex" flexDirection="column">
+        MB
+      </chakra.div>
       <chakra.div display="flex" flexDirection="column">
         <Tooltip label="home" placement="right">
           <chakra.a href="#home">

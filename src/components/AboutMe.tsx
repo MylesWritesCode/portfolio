@@ -32,12 +32,19 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       backgroundPosition="bottom"
       color="#FFFFFF"
     >
-      <chakra.div display="flex"  flexWrap="wrap-reverse" justifyContent="space-evenly" maxWidth="768px">
+      <chakra.div
+        display="flex"
+        width="100%"
+        flexWrap="wrap-reverse"
+        justifyContent="space-evenly"
+        // maxWidth="768px"
+        maxWidth="1080"
+      >
         <chakra.div
           display="flex"
           flexDirection="column"
           alignSelf="flex-start"
-          flexBasis={{base: "100%", sm: "100%", md: "50%"}}
+          flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
         >
           <chakra.h1 fontFamily="Lato" fontSize="60px" fontWeight="900">
             about me
@@ -49,26 +56,22 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             fontWeight="400"
             text-indent="2em"
           >
-            I do things and stuff with computers to make them go boom boom on
-            the internet. Also, things and stuff are cool dontcha know. Wow this
-            is a super long paragraph now and I need to figure out how to make
-            it look nice. I think my best bet is to just add some flex basis to
-            the div itself. Now that I've fixed the sizing, I wonder what
-            happens when I just go ahead and add a bunch of other paragraphs to
-            this div. I assume that the phrase 'about me' will eventually move
-            up. This div does currently have a height of 80vh. I'm fairly
-            certain that that's the minimum height I want on the div.
+            Why hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
+            dozens of new devs make the transition into tech. I made my
+            transition to development in 2016, working with different languages,
+            frameworks, and libraries throughout the years. Wanting a formal
+            education, I completed my CS degree remotely
           </chakra.p>
         </chakra.div>
         <chakra.div
           display="flex"
           justifyContent="center"
           alignItems="center"
-          flexBasis={{base: "100%", sm: "100%", md: "50%"}}
+          flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
         >
           <chakra.div
             backgroundImage="guitar-dude.jpg"
-            backgroundPosition="center"
+            backgroundPosition="top"
             backgroundSize="cover"
             width="100%"
             boxSize={["300px"]}
