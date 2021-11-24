@@ -32,8 +32,9 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
 
   return (
     <chakra.div
+      id="home"
       display="flex"
-      height="90vh"
+      height="80vh"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"

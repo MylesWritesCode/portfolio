@@ -16,12 +16,19 @@ import React from 'react';
 import type { NextPage } from 'next'
 import { chakra } from '@chakra-ui/react';
 
+// Page components
 import Welcome from '@components/Welcome';
+import Projects from '@components/Projects';
+import AboutMe from '@components/AboutMe';
+import BlogPosts from '@components/BlogPosts';
 
 const Home: NextPage = () => {
   return (
     <chakra.div>
       <Welcome />
+      <Projects />
+      <AboutMe />
+      <BlogPosts />
     </chakra.div>
   );
 }
