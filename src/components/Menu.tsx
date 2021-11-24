@@ -51,6 +51,7 @@ const theme = extendTheme({
 const Menu: React.FC<MenuProps> = ({ ...props }) => {
   return (
     <chakra.div
+      id="navbar-scroll-spy"
       display="flex"
       position="fixed"
       width="4rem"

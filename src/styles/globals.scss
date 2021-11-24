@@ -27,6 +27,10 @@
   --color-light-blue: #00A7E1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;

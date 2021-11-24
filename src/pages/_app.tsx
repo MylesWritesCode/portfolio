@@ -20,10 +20,12 @@ import Menu from "@components/Menu";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
+      <div data-spy="scroll" data-target="#navbar-scroll-spy" data-offset="0">
       <Menu />
       <chakra.div paddingLeft="4rem" maxWidth="calc(100vw-4rem)">
         <Component {...pageProps} />
       </chakra.div>
+      </div>
     </ChakraProvider>
   );
 }

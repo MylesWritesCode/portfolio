@@ -21,6 +21,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
   return (
     <chakra.div
       id="about-me"
+      data-scroll="about-me"
       display="flex"
       height="80vh"
       justifyContent="center"

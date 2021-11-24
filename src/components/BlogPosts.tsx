@@ -2,7 +2,7 @@
  * File: /src/components/BlogPosts.tsx
  * Project: portfolio
  * Purpose: // TODO: Add the purpose of the file here.
- * 
+ *
  * @author Myles Berueda
  * @date   Tuesday November 23rd 2021
  * -----
@@ -11,22 +11,22 @@
  * Copyright (c) 2021 MylesWritesCode
  * -----
  * HISTORY
-**/
-import React from 'react';
-import { chakra } from '@chakra-ui/react';
+ **/
+import React from "react";
+import { chakra } from "@chakra-ui/react";
 
-interface BlogPostsProps{}
+interface BlogPostsProps {}
 
 const BlogPosts: React.FC<BlogPostsProps> = ({ ...props }) => {
   return (
     <chakra.div
       id="blog"
+      data-scroll="blog"
       display="flex"
       height="80vh"
       justifyContent="center"
       alignItems="center"
       flexDirection={["column", "row"]}
-      // background="linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(lyndon-li-unsplash.jpg)"
       backgroundSize="cover"
       backgroundColor="var(--color-light-dark)"
       backgroundPosition="bottom"
@@ -37,6 +37,6 @@ const BlogPosts: React.FC<BlogPostsProps> = ({ ...props }) => {
       </chakra.div>
     </chakra.div>
   );
-}
+};
 
 export default BlogPosts;

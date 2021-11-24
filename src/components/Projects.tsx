@@ -21,6 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
   return (
     <chakra.div
       id="projects"
+      data-scroll="projects"
       display="flex"
       height="80vh"
       justifyContent="center"
