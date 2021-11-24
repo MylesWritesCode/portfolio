@@ -29,6 +29,9 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 
 html,
@@ -38,6 +41,12 @@ body {
   background-color: var(--color-light-dark);
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
