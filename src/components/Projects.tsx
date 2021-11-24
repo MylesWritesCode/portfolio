@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
       justifyContent="center"
       alignItems="center"
       flexDirection={["column", "row"]}
-      backgroundColor="var(--color-light-dark)"
+      backgroundColor="var(--color-dark)"
       color="#FFFFFF"
     >
       <chakra.div>

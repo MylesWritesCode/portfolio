@@ -26,7 +26,7 @@ import {
   FaBuffer,
   FaUserAstronaut,
   FaVial,
-  FaNewspaper,
+  FaRegNewspaper,
 } from "react-icons/fa";
 
 interface MenuProps {}
@@ -36,6 +36,9 @@ const Icon = chakra(ChakraIcon, {
     boxSize: 8,
     padding: ["0.15rem"],
     margin: ["0.35em 0em"],
+    _hover: {
+      color: "var(--color-red)",
+    },
   },
 });
 
@@ -70,19 +73,19 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
             <Icon as={FaHome} />
           </chakra.a>
         </Tooltip>
-        <Tooltip label="projects" placement="right">
-          <chakra.a href="#projects">
-            <Icon as={FaVial} />
-          </chakra.a>
-        </Tooltip>
         <Tooltip label="about me 👋" placement="right">
           <chakra.a href="#about-me">
             <Icon as={FaUserAstronaut} />
           </chakra.a>
         </Tooltip>
+        <Tooltip label="projects" placement="right">
+          <chakra.a href="#projects">
+            <Icon as={FaVial} />
+          </chakra.a>
+        </Tooltip>
         <Tooltip label="blog posts" placement="right">
           <chakra.a href="#blog">
-            <Icon as={FaNewspaper} />
+            <Icon as={FaRegNewspaper} />
           </chakra.a>
         </Tooltip>
       </chakra.div>

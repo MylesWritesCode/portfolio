@@ -26,8 +26,8 @@ const Home: NextPage = () => {
   return (
     <chakra.div>
       <Welcome />
-      <Projects />
       <AboutMe />
+      <Projects />
       <BlogPosts />
     </chakra.div>
   );

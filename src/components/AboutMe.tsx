@@ -26,9 +26,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       justifyContent="center"
       alignItems="center"
       flexDirection={["column", "row"]}
-      // background="linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(lyndon-li-unsplash.jpg)"
       backgroundSize="cover"
-      backgroundColor="var(--color-dark)"
+      backgroundColor="var(--color-light-dark)"
       backgroundPosition="bottom"
       color="#FFFFFF"
     >

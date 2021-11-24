@@ -34,12 +34,12 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
     <chakra.div
       id="home"
       display="flex"
-      height="80vh"
+      height="90vh"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
       backgroundColor="green.500"
-      background="linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(jeremy-thomas-unsplash.jpg)"
+      background="linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(1125841.png)"
       backgroundSize="cover"
       color="white"
     >
