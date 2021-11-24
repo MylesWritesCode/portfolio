@@ -13,9 +13,24 @@
  * HISTORY
  **/
 import React from "react";
-import { chakra } from "@chakra-ui/react";
+import { chakra, Icon as ChakraIcon, extendTheme } from "@chakra-ui/react";
+import { FaHome, FaGithub, FaTwitter, FaBuffer } from 'react-icons/fa';
 
 interface MenuProps {}
+
+const Icon = chakra(ChakraIcon, {
+  baseStyle: {
+    boxSize: 8,
+    padding: ["0.15rem"],
+    margin: ["0.25em"]
+  }
+});
+
+const theme = extendTheme({
+  components: {
+    Icon,
+  }
+})
 
 const Menu: React.FC<MenuProps> = ({ ...props }) => {
   return (
@@ -29,10 +44,20 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
       right="auto"
       bottom="0"
       flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
       background="var(--color-dark)"
       color="#FFFFFF"
     >
-      Something goes in here
+      <chakra.div
+        display="flex"
+        flexDirection="column"
+      >
+        <Icon as={FaHome} />
+        <Icon as={FaGithub} />
+        <Icon as={FaTwitter} />
+        <Icon as={FaBuffer} />
+      </chakra.div>
     </chakra.div>
   );
 };
