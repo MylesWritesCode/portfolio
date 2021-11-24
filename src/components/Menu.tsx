@@ -13,7 +13,12 @@
  * HISTORY
  **/
 import React from "react";
-import { chakra, Icon as ChakraIcon, extendTheme } from "@chakra-ui/react";
+import {
+  chakra,
+  Icon as ChakraIcon,
+  Tooltip,
+  extendTheme,
+} from "@chakra-ui/react";
 import {
   FaHome,
   FaGithub,
@@ -21,7 +26,7 @@ import {
   FaBuffer,
   FaUserAstronaut,
   FaVial,
-  FaNewspaper
+  FaNewspaper,
 } from "react-icons/fa";
 
 interface MenuProps {}
@@ -60,26 +65,38 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
     >
       <chakra.div display="flex" flexDirection="column"></chakra.div>
       <chakra.div display="flex" flexDirection="column">
-        <chakra.a href="#home">
-          <Icon as={FaHome} />
-        </chakra.a>
-        <chakra.a href="#projects">
-          <Icon as={FaVial} />
-        </chakra.a>
-        <chakra.a href="#about-me">
-          <Icon as={FaUserAstronaut} />
-        </chakra.a>
-        <chakra.a href="#blog">
-          <Icon as={FaNewspaper} />
-        </chakra.a>
+        <Tooltip label="home" placement="right">
+          <chakra.a href="#home">
+            <Icon as={FaHome} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="projects" placement="right">
+          <chakra.a href="#projects">
+            <Icon as={FaVial} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="about me 👋" placement="right">
+          <chakra.a href="#about-me">
+            <Icon as={FaUserAstronaut} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="blog posts" placement="right">
+          <chakra.a href="#blog">
+            <Icon as={FaNewspaper} />
+          </chakra.a>
+        </Tooltip>
       </chakra.div>
       <chakra.div display="flex" flexDirection="column">
-        <chakra.a href="https://github.com/myleswritescode" target="_blank">
-          <Icon as={FaGithub} />
-        </chakra.a>
-        <chakra.a href="https://twitter.com/mylescodesemoji" target="_blank">
-          <Icon as={FaTwitter} />
-        </chakra.a>
+        <Tooltip label="github.com/myleswritescode" placement="right">
+          <chakra.a href="https://github.com/myleswritescode" target="_blank">
+            <Icon as={FaGithub} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="twitter.com/mylescodesemoji" placement="right">
+          <chakra.a href="https://twitter.com/mylescodesemoji" target="_blank">
+            <Icon as={FaTwitter} />
+          </chakra.a>
+        </Tooltip>
       </chakra.div>
     </chakra.div>
   );
