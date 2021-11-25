@@ -161,6 +161,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             about me
           </chakra.h1>
           <chakra.div
+            margin="1rem 0rem"
             backgroundImage="guitar-dude.jpg"
             backgroundPosition="top"
             backgroundSize="cover"
@@ -169,12 +170,17 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             border="3px solid #FFFFFF"
             borderRadius="50%"
           />
-          <chakra.p fontWeight="16px">
-            In my journey of knowledge growth, I'm also delving into Web3
-            technologies such as Solidity and smart contract development on the
-            Ethereum blockchain. The sky's the limit; if I don't mention a
-            language or framework here, feel free to DM me on Twitter 😁.
-          </chakra.p>
+          <chakra.div>
+            <chakra.p fontWeight="16px">
+              In my journey of knowledge growth, I'm also delving into Web3
+              technologies such as Solidity and smart contract development on
+              the Ethereum blockchain.
+            </chakra.p>
+            <chakra.p fontWeight="16px" marginTop="1rem">
+              If you've got any questions, concerns, or otherwise useful and
+              unuseful comments, feel free to send a DM on Twitter 😀
+            </chakra.p>
+          </chakra.div>
         </chakra.div>
       </chakra.div>
     </chakra.div>
