@@ -47,7 +47,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       <chakra.h2
         textTransform="uppercase"
         letterSpacing="0.5rem"
-        fontSize="5rem"
+        fontSize={{base: "72px", sm: "60px", md: "72px"}}
         fontWeight="900"
         textAlign="center"
       >
@@ -57,7 +57,8 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
         <chakra.p
           textTransform="uppercase"
           letterSpacing="0.5rem"
-          fontSize="1.5em"
+          fontSize={{base: "24px", sm: "24px", md: "24px"}}
+          padding="1rem"
           fontWeight="400"
           textAlign="center"
         >
