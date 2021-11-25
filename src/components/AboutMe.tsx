@@ -62,8 +62,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         <chakra.h1
           width="fit-content"
           border="5px solid #FFFFFF"
-          fontSize="60px"
+          fontSize={{base: "60px", sm: "48px", md: "60px"}}
           fontWeight="900"
+          padding={{base: "0rem 1rem", sm: "0rem 1rem" }}
         >
           about me
         </chakra.h1>
@@ -167,6 +168,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             fontFamily="Lato"
           >
             <chakra.div
+              margin={{base: "0rem 0rem", sm: "1rem 0rem"}}
               backgroundImage="guitar-dude.jpg"
               backgroundPosition="top"
               backgroundSize="cover"

@@ -59,6 +59,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
           letterSpacing="0.5rem"
           fontSize="1.5em"
           fontWeight="400"
+          textAlign="center"
         >
           I'm a{" "}
           <chakra.span
