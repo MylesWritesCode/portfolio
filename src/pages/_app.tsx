@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
     <Head>
-      <title>Portfolio</title>
+      <title>Myles Berueda | Portfolio</title>
     </Head>
     <ChakraProvider>
       <div data-spy="scroll" data-target="#navbar-scroll-spy" data-offset="0">
