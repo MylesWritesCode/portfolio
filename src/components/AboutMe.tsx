@@ -49,7 +49,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       id="about-me"
       data-scroll="about-me"
       display="flex"
-      padding="5rem 3rem"
+      padding="3rem"
       justifyContent="center"
       alignItems="center"
       flexDirection="row"
@@ -72,10 +72,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
           alignSelf="flex-start"
           flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
         >
-          <chakra.h1 fontFamily="Lato" fontSize="60px" fontWeight="900">
-            about me
-          </chakra.h1>
           <chakra.p
+            marginTop="2rem"
             fontFamily="Lato"
             fontSize="16px"
             fontWeight="400"
@@ -93,9 +91,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             fontWeight="400"
             text-indent="2em"
           >
-            Below is a list of the tech that I've grown happy to use, but it is
-            not exhaustive. I've also worked with Ruby, C++, C#, Python, and
-            Rust, along with a few popular libraries for those languages. 
+            Below is a list of the web tech that I've grown happy to use, but it
+            is not exhaustive. I've also worked with Ruby, C++, C#, Python, and
+            Rust, along with a few popular libraries for those languages - such
+            as Rails(Ruby) and Django(Python).
           </chakra.p>
           <chakra.h1
             marginTop="1rem"
@@ -161,10 +160,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         </chakra.div>
         <chakra.div
           display="flex"
-          justifyContent="center"
+          flexDirection="column"
+          justifyContent="space-evenly"
           alignItems="center"
           flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
         >
+          <chakra.h1 fontFamily="Lato" fontSize="60px" fontWeight="900">
+            about me
+          </chakra.h1>
           <chakra.div
             backgroundImage="guitar-dude.jpg"
             backgroundPosition="top"
