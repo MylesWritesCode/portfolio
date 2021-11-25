@@ -71,26 +71,17 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
           flexDirection="column"
           alignSelf="flex-start"
           flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
+          fontFamily="Lato"
+          fontSize="16px"
+          fontWeight="400"
         >
-          <chakra.p
-            marginTop="2rem"
-            fontFamily="Lato"
-            fontSize="16px"
-            fontWeight="400"
-            text-indent="2em"
-          >
+          <chakra.p marginTop="2rem">
             Why, hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
-            dozens of new devs make the transition into tech. I made my
+            dozens of aspiring devs make the transition into tech. I made my
             transition to development in 2016, working with different languages,
             frameworks, and libraries throughout the years.
           </chakra.p>
-          <chakra.p
-            marginTop="1rem"
-            fontFamily="Lato"
-            fontSize="16px"
-            fontWeight="400"
-            text-indent="2em"
-          >
+          <chakra.p marginTop="1rem">
             Below is a list of the web tech that I've grown happy to use, but it
             is not exhaustive. I've also worked with Ruby, C++, C#, Python, and
             Rust, along with a few popular libraries for those languages - such
@@ -161,11 +152,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         <chakra.div
           display="flex"
           flexDirection="column"
-          justifyContent="space-evenly"
+          justifyContent="space-between"
           alignItems="center"
           flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
+          fontFamily="Lato"
         >
-          <chakra.h1 fontFamily="Lato" fontSize="60px" fontWeight="900">
+          <chakra.h1 fontSize="60px" fontWeight="900">
             about me
           </chakra.h1>
           <chakra.div
@@ -177,6 +169,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             border="3px solid #FFFFFF"
             borderRadius="50%"
           />
+          <chakra.p fontWeight="16px">
+            In my journey of knowledge growth, I'm also delving into Web3
+            technologies such as Solidity and smart contract development on the
+            Ethereum blockchain. The sky's the limit; if I don't mention a
+            language or framework here, feel free to DM me on Twitter 😁.
+          </chakra.p>
         </chakra.div>
       </chakra.div>
     </chakra.div>
