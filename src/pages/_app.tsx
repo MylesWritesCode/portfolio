@@ -14,11 +14,16 @@
  **/
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
+import Head from 'next/head';
 import { chakra, ChakraProvider } from "@chakra-ui/react";
 import Menu from "@components/Menu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <>
+    <Head>
+      <title>Portfolio</title>
+    </Head>
     <ChakraProvider>
       <div data-spy="scroll" data-target="#navbar-scroll-spy" data-offset="0">
       <Menu />
@@ -27,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </chakra.div>
       </div>
     </ChakraProvider>
+    </>
   );
 }
 
