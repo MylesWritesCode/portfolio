@@ -54,7 +54,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       alignItems="center"
       flexDirection="row"
       backgroundSize="cover"
-      backgroundColor="var(--color-light-dark)"
+      background="var(--color-light-dark)"
       backgroundPosition="bottom"
       color="#FFFFFF"
     >
