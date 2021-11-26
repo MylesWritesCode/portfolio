@@ -56,7 +56,13 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
           justifyContent="space-evenly"
           alignItems="center"
         >
-          <Project title="" img="" description="" link="" />
+          <Project
+            title="Order Summary"
+            img="https://i.imgur.com/40SEGno.png"
+            description="An order summary page"
+            github="https://github.com/MylesWritesCode/fm-order-summary-component"
+            link="https://fm-order-summary-component-omega.vercel.app/"
+          />
           <Project title="" img="" description="" link="" />
           <Project title="" img="" description="" link="" />
           <Project title="" img="" description="" link="" />
