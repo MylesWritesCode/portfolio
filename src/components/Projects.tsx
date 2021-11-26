@@ -2,7 +2,7 @@
  * File: /src/components/Projects.tsx
  * Project: portfolio
  * Purpose: // TODO: Add the purpose of the file here.
- * 
+ *
  * @author Myles Berueda
  * @date   Tuesday November 23rd 2021
  * -----
@@ -11,9 +11,11 @@
  * Copyright (c) 2021 MylesWritesCode
  * -----
  * HISTORY
-**/
-import React from 'react';
-import { chakra } from '@chakra-ui/react';
+ **/
+import React from "react";
+import { chakra } from "@chakra-ui/react";
+
+import Project from "@components/Project";
 
 interface ProjectsProps {}
 
@@ -23,22 +25,39 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
       id="projects"
       data-scroll="projects"
       display="flex"
-      height="80vh"
+      padding="3rem"
       justifyContent="center"
       alignItems="center"
-      flexDirection={["column", "row"]}
+      flexDirection="column"
+      fontFamily="Lato"
       backgroundColor="var(--color-dark)"
       color="#FFFFFF"
     >
-      <chakra.div>
-        <chakra.h2
-          fontSize="1rem"
+      <chakra.div
+        display="flex"
+        maxWidth="1080px"
+        padding="2rem"
+        flexDirection="column"
+      >
+        <chakra.div display="flex" width="100%" justifyContent="flex-end">
+          <chakra.h1>projects</chakra.h1>
+        </chakra.div>
+        <chakra.div
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
         >
-          Projects
-        </chakra.h2>
+          <Project title="" img="" description="" link="" />
+          <Project title="" img="" description="" link="" />
+          <Project title="" img="" description="" link="" />
+          <Project title="" img="" description="" link="" />
+          <Project title="" img="" description="" link="" />
+          <Project title="" img="" description="" link="" />
+        </chakra.div>
       </chakra.div>
     </chakra.div>
   );
-}
+};
 
 export default Projects;

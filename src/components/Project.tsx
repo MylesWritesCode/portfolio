@@ -1,7 +1,7 @@
 /**
  * File: /src/components/Project.tsx
  * Project: portfolio
- * Purpose: Ideally I'd have a few projects to show off on my portfolio. I've 
+ * Purpose: Ideally I'd have a few projects to show off on my portfolio. I've
  *          split this code into this component since it's repeatable.
  *
  * @author Myles Berueda
@@ -27,10 +27,18 @@ const Project: React.FC<ProjectProps> = ({
   title,
   img,
   description,
+  link,
   ...props
 }) => {
   return (
-    <chakra.div>
+    <chakra.div
+      width="300px"
+      height="200px"
+      margin="1rem"
+      padding="1rem"
+      border="5px solid #FFFFFF"
+      backgroundColor="var(--color-dark-green)"
+    >
       <chakra.h1>Project works</chakra.h1>
     </chakra.div>
   );
