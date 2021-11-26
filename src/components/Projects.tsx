@@ -67,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
           />
           <Project
             title="cm-ecommerce"
-            img="https://user-images.githubusercontent.com/24381348/134434625-dfe6a05e-b0d5-4872-83cf-67113cf555d7.png"
+            img="https://i.imgur.com/GtrhQor.png"
             description="A fullstack project with a React frontend and Express backend"
             github="https://github.com/MylesWritesCode/cm-ecommerce"
             link=""
