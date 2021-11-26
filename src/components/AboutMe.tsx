@@ -62,9 +62,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         <chakra.h1
           width="fit-content"
           border="5px solid #FFFFFF"
-          fontSize={{base: "60px", sm: "48px", md: "60px"}}
+          fontSize={{ base: "60px", sm: "48px", md: "60px" }}
           fontWeight="900"
-          padding={{base: "0rem 1rem", sm: "0rem 1rem" }}
+          padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
         >
           about me
         </chakra.h1>
@@ -168,7 +168,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             fontFamily="Lato"
           >
             <chakra.div
-              margin={{base: "0rem 0rem", sm: "1rem 0rem"}}
+              margin={{ base: "0rem 0rem", sm: "1rem 0rem" }}
               backgroundImage="guitar-dude.jpg"
               backgroundPosition="top"
               backgroundSize="cover"
@@ -179,7 +179,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             />
             <chakra.div>
               <chakra.p fontWeight="16px">
-                In my journey of knowledge growth, I'm delving into Web3
+                In my journey of knowledge growth, I'm also delving into Web3
                 technologies such as Solidity and smart contract development on
                 the Ethereum blockchain.
               </chakra.p>
