@@ -34,8 +34,8 @@ const Project: React.FC<ProjectProps> = ({
     <chakra.div
       width="300px"
       height="200px"
-      margin="1rem"
       padding="1rem"
+      marginTop="2rem"
       border="5px solid #FFFFFF"
       backgroundColor="var(--color-dark-green)"
     >

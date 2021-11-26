@@ -40,12 +40,20 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
         flexDirection="column"
       >
         <chakra.div display="flex" width="100%" justifyContent="flex-end">
-          <chakra.h1>projects</chakra.h1>
+          <chakra.h1
+            width="fit-content"
+            border="5px solid #FFFFFF"
+            fontSize={{ base: "60px", sm: "48px", md: "60px" }}
+            fontWeight="900"
+            padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
+          >
+            projects
+          </chakra.h1>
         </chakra.div>
         <chakra.div
           display="flex"
           flexWrap="wrap"
-          justifyContent="center"
+          justifyContent="space-evenly"
           alignItems="center"
         >
           <Project title="" img="" description="" link="" />
