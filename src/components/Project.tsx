@@ -13,18 +13,20 @@
  * -----
  * HISTORY
  **/
-import React from "react";
-import { chakra, Icon } from "@chakra-ui/react";
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { chakra, Box as ChakraBox, BoxProps, Icon } from "@chakra-ui/react";
 import { FaGithub, FaLink } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface ProjectProps {
   title: string;
   img: string;
   description: string;
-  link: string;
+  link?: string;
   github?: string;
 }
+
+export const Box = motion<BoxProps>(ChakraBox);
 
 const Project: React.FC<ProjectProps> = ({
   title,
@@ -34,14 +36,20 @@ const Project: React.FC<ProjectProps> = ({
   github,
   ...props
 }) => {
+  const [isHovering, setIsHovering] = useState(false);
   return (
     <chakra.div
       width="300px"
       height="200px"
-      marginTop="2rem"
+      margin="1rem"
       backgroundColor="var(--color-light-dark)"
       fontFamily="Lato"
-      _hover={{}}
+      onMouseEnter={() => {
+        setIsHovering(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovering(false);
+      }}
     >
       <chakra.div
         backgroundImage={`url(${img})`}
@@ -59,28 +67,35 @@ const Project: React.FC<ProjectProps> = ({
       >
         <chakra.h1 fontWeight="900">{title}</chakra.h1>
         <chakra.div>
-          <chakra.a href={github} target="_blank">
-            <Icon as={FaGithub} marginRight="0.5rem" />
-          </chakra.a>
-          <chakra.a href={link} target="_blank">
-            <Icon as={FaLink} />
-          </chakra.a>
+          {github && (
+            <chakra.a href={github} target="_blank">
+              <Icon as={FaGithub} marginRight="0.5rem" />
+            </chakra.a>
+          )}
+          {link && (
+            <chakra.a href={link} target="_blank">
+              <Icon as={FaLink} />
+            </chakra.a>
+          )}
         </chakra.div>
       </chakra.div>
 
-      <chakra.div
-        display="flex"
-        position="relative"
-        height="80%"
-        width="100%"
-        top="-100%"
-        left="0"
-        justifyContent="center"
-        alignItems="center"
-        background="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
-      >
-        {description}
-      </chakra.div>
+      {isHovering && (
+        <chakra.div
+          display="flex"
+          padding="2rem"
+          position="relative"
+          height="80%"
+          width="100%"
+          top="-100%"
+          left="0"
+          justifyContent="center"
+          alignItems="center"
+          background="linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))"
+        >
+          {description}
+        </chakra.div>
+      )}
     </chakra.div>
   );
 };
