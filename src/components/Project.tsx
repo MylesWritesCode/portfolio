@@ -18,7 +18,7 @@ import { chakra, Box as ChakraBox, BoxProps, Icon } from "@chakra-ui/react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-interface ProjectProps {
+export interface ProjectProps {
   title: string;
   img: string;
   description: string;
@@ -39,9 +39,9 @@ const Project: React.FC<ProjectProps> = ({
   const [isHovering, setIsHovering] = useState(false);
   return (
     <chakra.div
-      width="300px"
-      height="200px"
-      margin="1rem"
+      width="320px"
+      height="224px"
+      margin="0.5rem"
       backgroundColor="var(--color-light-dark)"
       fontFamily="Lato"
       onMouseEnter={() => {
@@ -52,7 +52,7 @@ const Project: React.FC<ProjectProps> = ({
       }}
     >
       <chakra.div
-        backgroundImage={`url(${img})`}
+        background={`url(${img})`}
         backgroundPosition="center"
         backgroundSize="100%"
         height="80%"

@@ -15,11 +15,45 @@
 import React from "react";
 import { chakra } from "@chakra-ui/react";
 
-import Project from "@components/Project";
+import Project, { ProjectProps } from "@components/Project";
 
 interface ProjectsProps {}
 
 const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
+  const projects: ProjectProps[] = [
+    {
+      title: "Order Summary",
+      img: "https://i.imgur.com/40SEGno.png",
+      description: "An order summary page with assets from frontendmentor.io",
+      github: "https://github.com/MylesWritesCode/fm-order-summary-component",
+      link: "https://fm-order-summary-component-omega.vercel.app/",
+    },
+    {
+      title: "cm-ecommerce",
+      img: "https://i.imgur.com/GtrhQor.png",
+      description:
+        "A fullstack project with a React frontend and Express backend",
+      github: "https://github.com/MylesWritesCode/cm-ecommerce",
+      link: "",
+    },
+    {
+      title: "30 days of C++",
+      img: "https://i.imgur.com/A6IRiHR.png",
+      description:
+        "All my C++ code for Hacker Rank's 30 days of code challenge",
+      github: "https://github.com/MylesWritesCode/hacker-rank-solutions",
+      link: "",
+    },
+    {
+      title: "Playground",
+      img: "myles-codes-playground.webp",
+      description:
+        "This was initially going to be my portfolio, but I opted to do this single-page instead. I'm now using this as a playground.",
+      github: "https://github.com/MylesWritesCode/myles-codes-playground",
+      link: "",
+    },
+  ];
+
   return (
     <chakra.div
       id="projects"
@@ -58,27 +92,16 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
           justifyContent="center"
           alignItems="center"
         >
-          <Project
-            title="Order Summary"
-            img="https://i.imgur.com/40SEGno.png"
-            description="An order summary page with assets from frontendmentor.io"
-            github="https://github.com/MylesWritesCode/fm-order-summary-component"
-            link="https://fm-order-summary-component-omega.vercel.app/"
-          />
-          <Project
-            title="cm-ecommerce"
-            img="https://i.imgur.com/GtrhQor.png"
-            description="A fullstack project with a React frontend and Express backend"
-            github="https://github.com/MylesWritesCode/cm-ecommerce"
-            link=""
-          />
-          <Project
-            title="30 days of C++"
-            img="https://i.imgur.com/A6IRiHR.png"
-            description="All my C++ code for Hacker Rank's 30 days of code challenge"
-            github="https://github.com/MylesWritesCode/hacker-rank-solutions"
-            link=""
-          />
+          {projects.map((project, index) => (
+            <Project
+              key={index}
+              title={project.title}
+              description={project.description}
+              img={project.img}
+              github={project.github}
+              link={project.link}
+            />
+          ))}
         </chakra.div>
       </chakra.div>
     </chakra.div>
