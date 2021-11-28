@@ -1,7 +1,8 @@
 /**
  * File: /src/components/Welcome.tsx
  * Project: portfolio
- * Purpose: // TODO: Add the purpose of the file here.
+ * Purpose: This will be shown in index.tsx and will be the primary landing 
+ *          page. 
  *
  * @author Myles Berueda
  * @date   Saturday November 20th 2021

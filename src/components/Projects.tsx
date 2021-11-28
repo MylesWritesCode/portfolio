@@ -1,7 +1,8 @@
 /**
  * File: /src/components/Projects.tsx
  * Project: portfolio
- * Purpose: // TODO: Add the purpose of the file here.
+ * Purpose: This will be shown in index.tsx and will show some projects that I
+ *          want to showcase.
  *
  * @author Myles Berueda
  * @date   Tuesday November 23rd 2021

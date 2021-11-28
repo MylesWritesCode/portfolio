@@ -1,7 +1,7 @@
 /**
  * File: /src/components/BlogPosts.tsx
  * Project: portfolio
- * Purpose: // TODO: Add the purpose of the file here.
+ * Purpose: This will be shown in index.tsx and will display blog posts.
  *
  * @author Myles Berueda
  * @date   Tuesday November 23rd 2021
