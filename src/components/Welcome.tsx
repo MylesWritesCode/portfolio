@@ -41,14 +41,14 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       justifyContent="center"
       alignItems="center"
       backgroundColor="green.500"
-      background="linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(1125841.png)"
+      background="linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(1125841.png) fixed"
       backgroundSize="cover"
       color="#FFFFFF"
     >
       <chakra.h2
         textTransform="uppercase"
         letterSpacing="0.5rem"
-        fontSize="5rem"
+        fontSize={{ base: "72px", sm: "60px", md: "72px" }}
         fontWeight="900"
         textAlign="center"
       >
@@ -58,8 +58,10 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
         <chakra.p
           textTransform="uppercase"
           letterSpacing="0.5rem"
-          fontSize="1.5em"
+          fontSize={{ base: "24px", sm: "24px", md: "24px" }}
+          padding="1rem"
           fontWeight="400"
+          textAlign="center"
         >
           I'm a{" "}
           <chakra.span

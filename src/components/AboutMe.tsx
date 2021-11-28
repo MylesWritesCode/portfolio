@@ -54,129 +54,141 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       alignItems="center"
       flexDirection="row"
       backgroundSize="cover"
-      backgroundColor="var(--color-light-dark)"
+      background="var(--color-light-dark)"
       backgroundPosition="bottom"
       color="#FFFFFF"
     >
-      <chakra.div
-        display="flex"
-        width="100%"
-        flexWrap="wrap-reverse"
-        justifyContent="space-evenly"
-        // maxWidth="768px"
-        maxWidth="1080"
-      >
+      <chakra.div display="flex" flexDirection="column">
+        <chakra.h1
+          width="fit-content"
+          border="5px solid #FFFFFF"
+          fontSize={{ base: "60px", sm: "48px", md: "60px" }}
+          fontWeight="900"
+          padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
+        >
+          about me
+        </chakra.h1>
         <chakra.div
           display="flex"
-          flexDirection="column"
-          alignSelf="flex-start"
-          flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
+          width="100%"
+          flexWrap="wrap"
+          justifyContent="space-evenly"
+          // maxWidth="768px"
+          maxWidth="1080"
         >
-          <chakra.p
-            marginTop="2rem"
-            fontFamily="Lato"
-            fontSize="16px"
-            fontWeight="400"
-            text-indent="2em"
-          >
-            Why, hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
-            dozens of new devs make the transition into tech. I made my
-            transition to development in 2016, working with different languages,
-            frameworks, and libraries throughout the years.
-          </chakra.p>
-          <chakra.p
-            marginTop="1rem"
-            fontFamily="Lato"
-            fontSize="16px"
-            fontWeight="400"
-            text-indent="2em"
-          >
-            Below is a list of the web tech that I've grown happy to use, but it
-            is not exhaustive. I've also worked with Ruby, C++, C#, Python, and
-            Rust, along with a few popular libraries for those languages - such
-            as Rails(Ruby) and Django(Python).
-          </chakra.p>
-          <chakra.h1
-            marginTop="1rem"
-            fontFamily="Lato"
-            fontSize="24px"
-            fontWeight="900"
-          >
-            my current preferred tech
-          </chakra.h1>
           <chakra.div
             display="flex"
-            justifyContent="center"
-            alignItems="center"
+            flexDirection="column"
+            alignSelf="flex-start"
+            flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
+            fontFamily="Lato"
+            fontSize="16px"
+            fontWeight="400"
           >
-            <chakra.ul
-              display="flex"
-              flexWrap="wrap"
-              listStylePosition="inside"
-              listStyleType="none"
+            <chakra.p marginTop="2rem">
+              Why, hello there 👋 I'm Myles - a dev, tutor, and mentor - helping
+              dozens of aspiring devs make the transition into tech. I made my
+              transition to development in 2016, working with different
+              languages, frameworks, and libraries throughout the years.
+            </chakra.p>
+            <chakra.p marginTop="1rem">
+              Below is a list of the web tech that I've grown happy to use, but
+              it is not exhaustive. I've also worked with Ruby, C++, C#, Python,
+              and Rust, along with a few popular libraries for those languages -
+              such as Rails(Ruby) and Django(Python).
+            </chakra.p>
+            <chakra.h1
+              marginTop="1rem"
+              fontFamily="Lato"
+              fontSize="24px"
+              fontWeight="900"
             >
-              <List>
-                <Icon as={FaReact} color="#5ADAFD" marginRight="0.5em" />
-                React
-              </List>
-              <List>
-                <Icon as={SiExpress} color="#FFFFFF" marginRight="0.5em" />
-                Express
-              </List>
-              <List>
-                <Icon as={FaNodeJs} color="#8FC43E" marginRight="0.5em" />
-                Node.js
-              </List>
-              <List>
-                <Icon as={SiGraphql} color="#E233A8" marginRight="0.5em" />
-                GraphQL
-              </List>
-              <List>
-                <Icon
-                  as={SiApollographql}
-                  color="#FFFFFF"
-                  marginRight="0.5em"
-                />
-                Apollo
-              </List>
-              <List>
-                <Icon as={SiNextdotjs} color="#FFFFFF" marginRight="0.5em" />
-                Next.js
-              </List>
-              <List>
-                <Icon as={SiChakraui} color="#FFFFFF" marginRight="0.5em" />
-                Chakra UI
-              </List>
-              <List>
-                <Icon as={FaSass} color="#CA6496" marginRight="0.5em" />
-                SASS/SCSS
-              </List>
-              <List>
-                <Icon as={SiTypescript} color="#2F74C0" marginRight="0.5em" />
-                Typescript
-              </List>
-            </chakra.ul>
+              my current preferred tech
+            </chakra.h1>
+            <chakra.div
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <chakra.ul
+                display="flex"
+                flexWrap="wrap"
+                listStylePosition="inside"
+                listStyleType="none"
+              >
+                <List>
+                  <Icon as={FaReact} color="#5ADAFD" marginRight="0.5em" />
+                  React
+                </List>
+                <List>
+                  <Icon as={SiExpress} color="#FFFFFF" marginRight="0.5em" />
+                  Express
+                </List>
+                <List>
+                  <Icon as={FaNodeJs} color="#8FC43E" marginRight="0.5em" />
+                  Node.js
+                </List>
+                <List>
+                  <Icon as={SiGraphql} color="#E233A8" marginRight="0.5em" />
+                  GraphQL
+                </List>
+                <List>
+                  <Icon
+                    as={SiApollographql}
+                    color="#FFFFFF"
+                    marginRight="0.5em"
+                  />
+                  Apollo
+                </List>
+                <List>
+                  <Icon as={SiNextdotjs} color="#FFFFFF" marginRight="0.5em" />
+                  Next.js
+                </List>
+                <List>
+                  <Icon as={SiChakraui} color="#FFFFFF" marginRight="0.5em" />
+                  Chakra UI
+                </List>
+                <List>
+                  <Icon as={FaSass} color="#CA6496" marginRight="0.5em" />
+                  SASS/SCSS
+                </List>
+                <List>
+                  <Icon as={SiTypescript} color="#2F74C0" marginRight="0.5em" />
+                  Typescript
+                </List>
+              </chakra.ul>
+            </chakra.div>
           </chakra.div>
-        </chakra.div>
-        <chakra.div
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-evenly"
-          alignItems="center"
-          flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
-        >
-          <chakra.h1 fontFamily="Lato" fontSize="60px" fontWeight="900">
-            about me
-          </chakra.h1>
           <chakra.div
-            backgroundImage="guitar-dude.jpg"
-            backgroundPosition="top"
-            backgroundSize="cover"
-            width="100%"
-            boxSize={["300px"]}
-            border="3px solid #FFFFFF"
-            borderRadius="50%"
-          />
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-around"
+            alignItems="center"
+            flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
+            fontFamily="Lato"
+          >
+            <chakra.div
+              margin={{ base: "0rem 0rem", sm: "1rem 0rem" }}
+              backgroundImage="guitar-dude.jpg"
+              backgroundPosition="top"
+              backgroundSize="cover"
+              width="100%"
+              boxSize={["300px"]}
+              border="5px solid #FFFFFF"
+              borderRadius="50%"
+            />
+            <chakra.div>
+              <chakra.p fontWeight="16px">
+                In my journey of knowledge growth, I'm also delving into Web3
+                technologies such as Solidity and smart contract development on
+                the Ethereum blockchain.
+              </chakra.p>
+              <chakra.p fontWeight="16px" marginTop="1rem">
+                If you've got any questions, concerns, or otherwise useful and
+                unuseful comments, feel free to send a DM on Twitter 😀
+              </chakra.p>
+            </chakra.div>
+          </chakra.div>
         </chakra.div>
       </chakra.div>
     </chakra.div>

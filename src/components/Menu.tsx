@@ -55,7 +55,7 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
       display="flex"
       position="fixed"
       width="4rem"
-      height="100vh"
+      height={{base: "100vh", sm: "100%"}}
       padding="1rem 0rem"
       left="0"
       top="0"
