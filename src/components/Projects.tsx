@@ -29,7 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
       link: "https://fm-order-summary-component-omega.vercel.app/",
     },
     {
-      title: "cm-ecommerce",
+      title: "Ecommerce Playground",
       img: "https://i.imgur.com/GtrhQor.png",
       description:
         "A fullstack project with a React frontend and Express backend",
