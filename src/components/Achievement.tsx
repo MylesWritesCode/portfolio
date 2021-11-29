@@ -28,10 +28,13 @@ const Box = motion<BoxProps>(ChakraBox);
 
 const containerVariants: Variants = {
   initial: {
-    // border: "5px solid rgba(0, 0, 0, 0.15)",
+    y: -100,
+    opacity: 0,
   },
-  onHover: {
-    // border: "5px solid rgba(255, 255, 255, 1)",
+  onHover: {},
+  inView: {
+    y: 0,
+    opacity: 1,
   },
 };
 
@@ -54,10 +57,11 @@ const Achievement: React.FC<AchievementProps> = ({
       boxShadow="dark-lg"
       backdropFilter="blur(5px)"
       fontFamily="Lato"
+      overflow="hidden"
       variants={containerVariants}
       initial="initial"
       whileHover="onHover"
-      overflow="hidden"
+      whileInView="inView"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       _after={{
@@ -77,7 +81,7 @@ const Achievement: React.FC<AchievementProps> = ({
         content: '""',
         inset: "5px",
         position: "absolute",
-        background: isHovering ? "rgba(0, 0, 0, 1)" : "transparent",
+        background: isHovering ? "#1f1f1f" : "transparent",
         zIndex: 10,
       }}
     >
@@ -100,7 +104,8 @@ const Achievement: React.FC<AchievementProps> = ({
             <Icon as={FaLink} />
           </chakra.a>
         </chakra.div>
-      </chakra.div> { /* Content end */}
+      </chakra.div>{" "}
+      {/* Content end */}
     </Box>
   );
 };
