@@ -81,7 +81,7 @@ const Achievement: React.FC<AchievementProps> = ({
         content: '""',
         inset: "5px",
         position: "absolute",
-        background: isHovering ? "var(--color-dark)" : "var(--color-dark)",
+        background: isHovering ? "var(--color-light-dark)" : "var(--color-light-dark)",
         zIndex: 10,
       }}
     >
