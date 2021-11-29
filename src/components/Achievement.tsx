@@ -12,7 +12,7 @@
  * -----
  * HISTORY
  **/
-import React from "react";
+import React, { useState } from "react";
 import { chakra, Box as ChakraBox, BoxProps, Icon } from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
 import { FaLink, FaMedal } from "react-icons/fa";
@@ -28,9 +28,11 @@ const Box = motion<BoxProps>(ChakraBox);
 
 const containerVariants: Variants = {
   initial: {
-    border: "3px solid rgba(0, 0, 0, 0.15)",
+    // border: "5px solid rgba(0, 0, 0, 0.15)",
   },
-  onHover: {},
+  onHover: {
+    // border: "5px solid rgba(255, 255, 255, 1)",
+  },
 };
 
 const Achievement: React.FC<AchievementProps> = ({
@@ -40,8 +42,11 @@ const Achievement: React.FC<AchievementProps> = ({
   link,
   ...props
 }) => {
+  const [isHovering, setIsHovering] = useState(false);
   return (
+    // Card
     <Box
+      position="relative"
       margin="1rem 0rem"
       padding="2rem"
       width="100%"
@@ -50,9 +55,38 @@ const Achievement: React.FC<AchievementProps> = ({
       backdropFilter="blur(5px)"
       fontFamily="Lato"
       variants={containerVariants}
+      initial="initial"
       whileHover="onHover"
+      overflow="hidden"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+      _after={{
+        display: isHovering ? "block" : "none",
+        position: "absolute",
+        content: '""',
+        height: "1260px",
+        width: "1260px",
+        left: "-10px",
+        top: "-590px",
+        background:
+          "conic-gradient(#fd074c, #fe9020, #fff036, #3edf4b, #3369fe, #a106b4, #fd004c)",
+        animation: "rgb 2s infinite linear",
+      }}
+      _before={{
+        content: '""',
+        inset: "5px",
+        position: "absolute",
+        background: isHovering ? "rgba(0, 0, 0, 1)" : "transparent",
+        zIndex: 10,
+      }}
     >
-      <chakra.div display="flex" alignItems="center">
+      {/* Content */}
+      <chakra.div
+        display="flex"
+        position="relative"
+        alignItems="center"
+        zIndex={50}
+      >
         <Icon as={FaMedal} marginRight="1.5em" boxSize={"24px"} />
         <chakra.div>
           <chakra.div display="flex">
@@ -65,7 +99,7 @@ const Achievement: React.FC<AchievementProps> = ({
             <Icon as={FaLink} />
           </chakra.a>
         </chakra.div>
-      </chakra.div>
+      </chakra.div> { /* Content end */}
     </Box>
   );
 };
