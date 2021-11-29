@@ -63,11 +63,12 @@ const Achievement: React.FC<AchievementProps> = ({
       _after={{
         display: isHovering ? "block" : "none",
         position: "absolute",
+        transformOrigin: "center",
         content: '""',
-        height: "1260px",
-        width: "1260px",
-        left: "-10px",
-        top: "-590px",
+        height: "1000%",
+        width: "150%",
+        left: "-25%",
+        top: "-450%",
         background:
           "conic-gradient(#fd074c, #fe9020, #fff036, #3edf4b, #3369fe, #a106b4, #fd004c)",
         animation: "rgb 2s infinite linear",

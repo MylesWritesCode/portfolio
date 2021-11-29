@@ -12,17 +12,17 @@
  * -----
  * HISTORY
 **/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
 
 :root {
-  --color-dark:       #111111;
+  --color-dark: #111111;
   --color-light-dark: #2d2c25;
-  --color-red:        #DB5461;
-  --color-green:      #B8D8BA;
-  --color-dark-green: #136F63;
-  --color-blue:       #3F88C5;
-  --color-dark-blue:  #032B43;
-  --color-light-blue: #00A7E1;
+  --color-red: #db5461;
+  --color-green: #b8d8ba;
+  --color-dark-green: #136f63;
+  --color-blue: #3f88c5;
+  --color-dark-blue: #032b43;
+  --color-light-blue: #00a7e1;
 }
 
 html {
@@ -37,8 +37,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--color-light-dark);
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body {
