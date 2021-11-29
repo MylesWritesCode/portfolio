@@ -53,7 +53,7 @@ const Achievement: React.FC<AchievementProps> = ({
       margin="1rem 0rem"
       padding="2rem"
       width="100%"
-      background="rgba(0, 0, 0, 0.7)"
+      background="rgba(0, 0, 0, 0.5)"
       boxShadow="dark-lg"
       backdropFilter="blur(5px)"
       fontFamily="Lato"
@@ -81,7 +81,7 @@ const Achievement: React.FC<AchievementProps> = ({
         content: '""',
         inset: "5px",
         position: "absolute",
-        background: isHovering ? "#1f1f1f" : "transparent",
+        background: isHovering ? "var(--color-dark)" : "var(--color-dark)",
         zIndex: 10,
       }}
     >
