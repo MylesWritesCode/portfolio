@@ -13,15 +13,23 @@
  * HISTORY
  **/
 import React, { useState } from "react";
-import { chakra, Box as ChakraBox, BoxProps, Icon } from "@chakra-ui/react";
+import {
+  chakra,
+  Box as ChakraBox,
+  BoxProps,
+  Icon,
+  Tooltip,
+} from "@chakra-ui/react";
 import { motion, Variants } from "framer-motion";
-import { FaLink, FaMedal } from "react-icons/fa";
+import { FaGithub, FaLink, FaMedal } from "react-icons/fa";
 
 export interface AchievementProps {
   title: string;
   subtitle: string;
   description: string;
+  proof?: string;
   link?: string;
+  github?: string;
 }
 
 const Box = motion<BoxProps>(ChakraBox);
@@ -42,7 +50,9 @@ const Achievement: React.FC<AchievementProps> = ({
   title,
   subtitle,
   description,
+  proof,
   link,
+  github,
   ...props
 }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -50,7 +60,7 @@ const Achievement: React.FC<AchievementProps> = ({
     // Card
     <Box
       position="relative"
-      margin="1rem 0rem"
+      margin="0.5rem 0rem"
       padding="2rem"
       width="100%"
       background="rgba(0, 0, 0, 0.5)"
@@ -81,28 +91,65 @@ const Achievement: React.FC<AchievementProps> = ({
         content: '""',
         inset: "5px",
         position: "absolute",
-        background: isHovering ? "var(--color-light-dark)" : "var(--color-light-dark)",
+        background: isHovering
+          ? "var(--color-light-dark)"
+          : "var(--color-light-dark)",
         zIndex: 10,
       }}
     >
       {/* Content */}
       <chakra.div
         display="flex"
+        width="100%"
+        minHeight="80px"
         position="relative"
         alignItems="center"
+        justifyContent="space-between"
         zIndex={50}
       >
-        <Icon as={FaMedal} marginRight="1.5em" boxSize={"24px"} />
-        <chakra.div>
-          <chakra.div display="flex">
-            <chakra.h2 fontWeight="900">{title}</chakra.h2>
-            <chakra.span margin="0rem 1rem">&#8226;</chakra.span>
-            <chakra.h2 fontStyle="italic">{subtitle}</chakra.h2>
+        <chakra.div display="flex" alignItems="center" justifyContent="center">
+          <Icon as={FaMedal} marginRight="1.5em" boxSize={"24px"} />
+          <chakra.div>
+            <chakra.div display="flex" flexWrap="wrap">
+              <chakra.h2
+                fontWeight="900"
+                flexBasis={{ base: "auto", sm: "100%", md: "auto" }}
+              >
+                {title}
+              </chakra.h2>
+              <chakra.span display={{ base: "none", sm: "none", md: "block" }} margin="0rem 1rem">&#8226;</chakra.span>
+              <chakra.h2 fontStyle="italic">{subtitle}</chakra.h2>
+            </chakra.div>
+            <chakra.p>{description}</chakra.p>
           </chakra.div>
-          <chakra.p>{description}</chakra.p>
-          <chakra.a href={link} target="_blank">
-            <Icon as={FaLink} />
-          </chakra.a>
+        </chakra.div>
+        <chakra.div
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {proof && (
+            <Tooltip label="proof" placement="right">
+              <chakra.a href={proof} target="_blank">
+                <Icon as={FaMedal} />
+              </chakra.a>
+            </Tooltip>
+          )}
+          {github && (
+            <Tooltip label="github" placement="right">
+              <chakra.a href={github} target="_blank">
+                <Icon as={FaGithub} />
+              </chakra.a>
+            </Tooltip>
+          )}
+          {link && (
+            <Tooltip label="link" placement="right">
+              <chakra.a href={link} target="_blank">
+                <Icon as={FaLink} />
+              </chakra.a>
+            </Tooltip>
+          )}
         </chakra.div>
       </chakra.div>{" "}
       {/* Content end */}

@@ -91,7 +91,7 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
             <Icon as={FaVial} />
           </chakra.a>
         </Tooltip>
-        <Tooltip label="blog posts" placement="right">
+        <Tooltip label="blog posts (coming soon? 🤞)" placement="right">
           <chakra.a href="#blog">
             <Icon as={FaRegNewspaper} />
           </chakra.a>

@@ -47,10 +47,30 @@ const theme = extendTheme({
 const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
   const achievements: AchievementProps[] = [
     {
-      title: "title",
-      subtitle: "this is a subtitle",
-      description: "this is a description thingy",
-      link: "#",
+      title: "freeCodeCamp",
+      subtitle: "Responsive Web Design",
+      description:
+        "Developer Certification, representing approximately 300 hours of coursework in responsive web design.",
+      proof:
+        "https://freecodecamp.org/certification/myleswritescode/responsive-web-design",
+      link: "https://www.freecodecamp.org/learn/responsive-web-design/",
+    },
+    {
+      title: "buildspace",
+      subtitle: "Building an NFT game",
+      description:
+        "Spend a week learning about implementing your own smart contracts on the Ethereum blockchain and connecting it to a React frontend.",
+      proof:
+        "https://opensea.io/assets/matic/0x3cd266509d127d0eac42f4474f57d0526804b44e/3873/",
+      link: "https://buildspace.so/",
+      github:
+        "https://github.com/MylesWritesCode/buildspace-turn-based-browser-game",
+    },
+    {
+      title: "Southern New Hampshire University",
+      subtitle: "BSc Computer Science",
+      description:
+        "Formal (remote) education in computer science with a focus on software development.",
     },
   ];
 
@@ -216,7 +236,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         padding="5rem 2rem"
         justifyContent="center"
         alignItems="center"
-        background="url(jeremy-thomas-unsplash.jpg) fixed"
+        background="url(martin-shreder-unsplash.jpg) fixed"
         backgroundPosition="center"
         backgroundSize="cover"
       >
@@ -233,6 +253,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
           <chakra.div
             display="flex"
             width="100%"
+            margin="1rem 0rem"
             padding="2rem"
             justifyContent="center"
             alignItems="center"
@@ -257,7 +278,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
               title={a.title}
               subtitle={a.subtitle}
               description={a.description}
+              proof={a.proof}
               link={a.link}
+              github={a.github}
             />
           ))}
         </chakra.div>
