@@ -236,7 +236,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         padding="5rem 2rem"
         justifyContent="center"
         alignItems="center"
-        background="url(martin-shreder-unsplash.jpg) fixed"
+        background="url(altumcode-unsplash.jpg) fixed"
         backgroundPosition="center"
         backgroundSize="cover"
       >
