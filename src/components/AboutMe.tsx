@@ -24,7 +24,7 @@ import {
   SiNextdotjs,
   SiTypescript,
 } from "react-icons/si";
-import Achievement from "./Achievement";
+import Achievement, { AchievementProps } from "./Achievement";
 
 interface AboutMeProps {}
 
@@ -45,6 +45,15 @@ const theme = extendTheme({
 });
 
 const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
+  const achievements: AchievementProps[] = [
+    {
+      title: "title",
+      subtitle: "this is a subtitle",
+      description: "this is a description thingy",
+      link: "#",
+    },
+  ];
+
   return (
     <>
       <chakra.div
@@ -223,33 +232,34 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         >
           <chakra.div
             display="flex"
-            margin="1rem 0rem"
+            width="100%"
+            padding="2rem"
             justifyContent="center"
             alignItems="center"
-            justifySelf="flex-start"
+            background="rgba(0, 0, 0, 0.7)"
+            boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
+            backdropFilter="blur(5px)"
+            border="1px solid rgba(0, 0, 0, 0.15)"
           >
-            <chakra.div
-              display="flex"
+            <chakra.h1
               width="fit-content"
-              padding="2rem"
-              background="rgba(0, 0, 0, 0.7)"
-              justifyContent="center"
-              alignItems="center"
+              padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
+              fontSize={{ base: "32px", sm: "24px", md: "32px" }}
+              textAlign="center"
+              fontWeight="900"
             >
-              <chakra.h1
-                width="fit-content"
-                border="5px solid #FFFFFF"
-                fontSize={{ base: "48px", sm: "24px", md: "48px" }}
-                textAlign="center"
-                fontWeight="900"
-                padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
-              >
-                achievements unlocked
-              </chakra.h1>
-            </chakra.div>
+              achievements unlocked
+            </chakra.h1>
           </chakra.div>
-          <Achievement />
-          <Achievement />
+          {achievements.map((a, index) => (
+            <Achievement
+              key={index}
+              title={a.title}
+              subtitle={a.subtitle}
+              description={a.description}
+              link={a.link}
+            />
+          ))}
         </chakra.div>
       </chakra.div>
     </>
