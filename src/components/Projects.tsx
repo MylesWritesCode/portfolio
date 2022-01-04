@@ -55,7 +55,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
     },
     {
       title: "Shoepify",
-      img: "https://i.imgur.com/pWgHSj8.png",
+      img: "https://i.imgur.com/sS6y9qA.png",
       description:
         "I wanted to learn a little more about the Shopify ecosystem, specifically pertaining to headless integration and app development. Here's my take on an ecommerce shop.",
       github: "https://github.com/MylesWritesCode/shoepify",
