@@ -30,7 +30,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
       link: "https://fm-order-summary-component-omega.vercel.app/",
     },
     {
-      title: "Ecommerce Playground",
+      title: "Animation Playground",
       img: "https://i.imgur.com/GtrhQor.png",
       description:
         "A fullstack project with a React frontend and Express backend",
@@ -52,6 +52,14 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
         "This was initially going to be my portfolio, but I opted to do this single-page instead. I'm now using this as a playground.",
       github: "https://github.com/MylesWritesCode/myles-codes-playground",
       link: "",
+    },
+    {
+      title: "Shoepify",
+      img: "https://i.imgur.com/pWgHSj8.png",
+      description:
+        "I wanted to learn a little more about the Shopify ecosystem, specifically pertaining to headless integration and app development. Here's my take on an ecommerce shop.",
+      github: "https://github.com/MylesWritesCode/shoepify",
+      link: "https://shoepify.vercel.app/products",
     },
   ];
 
