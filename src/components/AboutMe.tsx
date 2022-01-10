@@ -80,7 +80,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         id="about-me"
         data-scroll="about-me"
         display="flex"
-        padding="10rem 2rem"
+        padding={{base: "2rem 5rem", md: "8rem 2rem"}}
         justifyContent="center"
         alignItems="center"
         flexDirection="row"
@@ -93,7 +93,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
           <chakra.h1
             width="fit-content"
             border="5px solid #FFFFFF"
-            fontSize={{ base: "60px", sm: "48px", md: "60px" }}
+            fontSize={{ base: "48px", sm: "48px", md: "60px" }}
             fontWeight="900"
             padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
           >

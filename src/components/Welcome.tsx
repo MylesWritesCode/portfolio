@@ -37,6 +37,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       id="home"
       display="flex"
       height="100vh"
+      padding={{base: "0.5rem"}}
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
@@ -48,7 +49,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       <chakra.h2
         textTransform="uppercase"
         letterSpacing="0.5rem"
-        fontSize={{ base: "72px", sm: "60px", md: "72px" }}
+        fontSize={{ base: "48px", sm: "48px", md: "72px" }}
         fontWeight="900"
         textAlign="center"
       >

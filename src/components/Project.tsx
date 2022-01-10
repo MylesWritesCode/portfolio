@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({
       <chakra.div
         background={`url(${img})`}
         backgroundPosition="center"
-        backgroundSize="100%"
+        backgroundSize="cover"
         height="80%"
         width="100%"
       />

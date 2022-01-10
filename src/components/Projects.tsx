@@ -80,7 +80,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
         display="flex"
         width="100%"
         maxWidth="1080px"
-        padding={{ base: "2rem", sm: "0rem", md: "2rem" }}
+        padding={{ base: "0rem", sm: "0rem", md: "2rem" }}
         flexDirection="column"
       >
         <chakra.div display="flex" width="100%" justifyContent="flex-end">
@@ -88,7 +88,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
             width="fit-content"
             margin="1rem 0rem"
             border="5px solid #FFFFFF"
-            fontSize={{ base: "60px", sm: "48px", md: "60px" }}
+            fontSize={{ base: "48px", sm: "48px", md: "60px" }}
             fontWeight="900"
             padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
           >
