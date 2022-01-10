@@ -105,10 +105,21 @@ const Achievement: React.FC<AchievementProps> = ({
         position="relative"
         alignItems="center"
         justifyContent="space-between"
+        flexDirection={{ base: "column", md: "row" }}
         zIndex={50}
       >
-        <chakra.div display="flex" alignItems="center" justifyContent="center">
-          <Icon as={FaMedal} marginRight="1.5em" boxSize={"24px"} />
+        <chakra.div
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Icon
+            as={FaMedal}
+            margin={{base: "1rem 0", md: "0 1.5rem 0 0"}}
+            marginRight={{ base: "0", md: "1.5em" }}
+            boxSize={"24px"}
+          />
           <chakra.div>
             <chakra.div display="flex" flexWrap="wrap">
               <chakra.h2
@@ -117,7 +128,12 @@ const Achievement: React.FC<AchievementProps> = ({
               >
                 {title}
               </chakra.h2>
-              <chakra.span display={{ base: "none", sm: "none", md: "block" }} margin="0rem 1rem">&#8226;</chakra.span>
+              <chakra.span
+                display={{ base: "none", sm: "none", md: "block" }}
+                margin="0rem 1rem"
+              >
+                &#8226;
+              </chakra.span>
               <chakra.h2 fontStyle="italic">{subtitle}</chakra.h2>
             </chakra.div>
             <chakra.p>{description}</chakra.p>
@@ -125,8 +141,10 @@ const Achievement: React.FC<AchievementProps> = ({
         </chakra.div>
         <chakra.div
           display="flex"
-          flexDirection="column"
-          justifyContent="center"
+          margin={{ base: "0.5rem", md: "0" }}
+          flexDirection={{ base: "row", md: "column" }}
+          width={{base: "100%", md: "unset"}}
+          justifyContent={{base: "space-evenly", md: "center"}}
           alignItems="center"
         >
           {proof && (

@@ -80,7 +80,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         id="about-me"
         data-scroll="about-me"
         display="flex"
-        padding={{base: "2rem 5rem", md: "8rem 2rem"}}
+        // padding={{base: "2rem 5rem", md: "8rem 2rem"}}
         justifyContent="center"
         alignItems="center"
         flexDirection="row"
@@ -89,11 +89,19 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         backgroundPosition="bottom"
         color="#FFFFFF"
       >
-        <chakra.div display="flex" flexDirection="column">
+        <chakra.div
+          display="flex"
+          margin={{ base: "1rem" }}
+          padding={{base: "3rem 1rem"}}
+          width={{base: "70%"}}
+          maxWidth={{base: "1024px"}}
+          flexDirection="column"
+          flex="1 1 50%"
+        >
           <chakra.h1
             width="fit-content"
             border="5px solid #FFFFFF"
-            fontSize={{ base: "48px", sm: "48px", md: "60px" }}
+            fontSize={{ base: "40px", md: "60px" }}
             fontWeight="900"
             padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
           >
@@ -212,7 +220,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
                 backgroundPosition="top"
                 backgroundSize="cover"
                 width="100%"
-                boxSize={["300px"]}
+                boxSize={{base: "200px", md: "300px"}}
                 border="5px solid #FFFFFF"
                 borderRadius="50%"
               />
