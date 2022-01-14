@@ -39,11 +39,13 @@ const Project: React.FC<ProjectProps> = ({
   const [isHovering, setIsHovering] = useState(false);
   return (
     <chakra.div
+      display="flex"
       width="320px"
-      height="224px"
       margin="0.5rem"
+      flexDirection="column"
       backgroundColor="var(--color-light-dark)"
       fontFamily="Lato"
+      userSelect="none"
       onMouseEnter={() => {
         setIsHovering(true);
       }}
@@ -52,16 +54,40 @@ const Project: React.FC<ProjectProps> = ({
       }}
     >
       <chakra.div
-        background={`url(${img})`}
-        backgroundPosition="center"
-        backgroundSize="cover"
-        height="80%"
-        width="100%"
-      />
+        position="relative"
+        background="green.700"
+        padding="0 0 66.67% 0"
+      >
+        <chakra.img
+          src={img}
+          position="absolute"
+          top="0"
+          left="0"
+          height="100%"
+          width="100%"
+          objectFit="cover"
+        />
+        {isHovering && (
+          <chakra.div
+            display="flex"
+            position="absolute"
+            top="0"
+            left="0"
+            height="100%"
+            width="100%"
+            padding="2rem"
+            justifyContent="center"
+            alignItems="center"
+            background="linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))"
+          >
+            {description}
+          </chakra.div>
+        )}
+      </chakra.div>
       <chakra.div
         display="flex"
         height="20%"
-        padding="0rem 1rem"
+        padding="1rem 1rem"
         justifyContent="space-between"
         alignItems="center"
       >
@@ -79,23 +105,6 @@ const Project: React.FC<ProjectProps> = ({
           )}
         </chakra.div>
       </chakra.div>
-
-      {isHovering && (
-        <chakra.div
-          display="flex"
-          padding="2rem"
-          position="relative"
-          height="80%"
-          width="100%"
-          top="-100%"
-          left="0"
-          justifyContent="center"
-          alignItems="center"
-          background="linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))"
-        >
-          {description}
-        </chakra.div>
-      )}
     </chakra.div>
   );
 };
