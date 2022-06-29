@@ -14,7 +14,6 @@
  **/
 import React from "react";
 import { chakra, Icon, extendTheme } from "@chakra-ui/react";
-import {} from "react-icons/fc";
 import { FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import {
   SiApollographql,
@@ -92,9 +91,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         <chakra.div
           display="flex"
           margin={{ base: "1rem" }}
-          padding={{base: "3rem 1rem"}}
-          width={{base: "70%"}}
-          maxWidth={{base: "1024px"}}
+          padding={{ base: "3rem 1rem" }}
+          width={{ base: "70%" }}
+          maxWidth={{ base: "1024px" }}
           flexDirection="column"
           flex="1 1 50%"
         >
@@ -124,17 +123,21 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
               fontWeight="400"
             >
               <chakra.p marginTop="2rem">
-                Why, hello there 👋 I'm Myles - a dev, tutor, and mentor -
-                helping dozens of aspiring devs make the transition into tech. I
-                made my transition to development in 2016, working with
-                different languages, frameworks, and libraries throughout the
-                years.
+                {[
+                  "Why, hello there 👋 I'm Myles - a dev, tutor, and mentor -",
+                  "helping dozens of aspiring devs make the transition into tech. I",
+                  "made my transition to development in 2016, working with",
+                  "different languages, frameworks, and libraries throughout the",
+                  "years.",
+                ].join(" ")}
               </chakra.p>
               <chakra.p marginTop="1rem">
-                Below is a list of the web tech that I've grown happy to use,
-                but it is not exhaustive. I've also worked with Ruby, C++, C#,
-                Python, and Rust, along with a few popular libraries for those
-                languages - such as Rails(Ruby) and Django(Python).
+                {[
+                  "Below is a list of the web tech that I've grown happy to use,",
+                  "but it is not exhaustive. I've also worked with Ruby, C++, C#,",
+                  "Python, and Rust, along with a few popular libraries for those",
+                  "languages - such as Rails(Ruby) and Django(Python).",
+                ].join(" ")}
               </chakra.p>
               <chakra.h1
                 marginTop="1rem"
@@ -142,7 +145,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
                 fontSize="24px"
                 fontWeight="900"
               >
-                my current preferred tech
+                {"my current preferred tech"}
               </chakra.h1>
               <chakra.div
                 display="flex"
@@ -220,19 +223,23 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
                 backgroundPosition="top"
                 backgroundSize="cover"
                 width="100%"
-                boxSize={{base: "200px", md: "300px"}}
+                boxSize={{ base: "200px", md: "300px" }}
                 border="5px solid #FFFFFF"
                 borderRadius="50%"
               />
               <chakra.div>
                 <chakra.p fontWeight="16px">
-                  In my journey of knowledge growth, I'm also delving into Web3
-                  technologies such as Solidity and smart contract development
-                  on the Ethereum blockchain.
+                  {[
+                    "In my journey of knowledge growth, I'm also delving into Web3",
+                    "technologies such as Solidity and smart contract development",
+                    "on the Ethereum blockchain.",
+                  ].join(" ")}
                 </chakra.p>
                 <chakra.p fontWeight="16px" marginTop="1rem">
-                  If you've got any questions, concerns, or otherwise useful and
-                  unuseful comments, feel free to send a DM on Twitter 😀
+                  {[
+                    "If you've got any questions, concerns, or otherwise useful and",
+                    "unuseful comments, feel free to send a DM on Twitter 😀",
+                  ].join(" ")}
                 </chakra.p>
               </chakra.div>
             </chakra.div>
