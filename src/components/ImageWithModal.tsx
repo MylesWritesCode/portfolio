@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 
-/* eslint-disable @next/next/no-img-element */
 interface ImageWithModalProps {
   href: string;
   className?: string;
