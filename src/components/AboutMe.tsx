@@ -14,7 +14,6 @@
  **/
 import React from "react";
 import { chakra, Icon, extendTheme } from "@chakra-ui/react";
-import {} from "react-icons/fc";
 import { FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import {
   SiApollographql,
@@ -72,6 +71,11 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
       description:
         "Formal (remote) education in computer science with a focus on software development.",
     },
+    {
+      title: "Excellent parallel parker",
+      subtitle: ":)",
+      description: "Driver's license first try",
+    },
   ];
 
   return (
@@ -80,31 +84,27 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         id="about-me"
         data-scroll="about-me"
         display="flex"
-        // padding={{base: "2rem 5rem", md: "8rem 2rem"}}
         justifyContent="center"
         alignItems="center"
         flexDirection="row"
         backgroundSize="cover"
         background="var(--color-light-dark)"
         backgroundPosition="bottom"
-        color="#FFFFFF"
-      >
+        color="#FFFFFF">
         <chakra.div
           display="flex"
           margin={{ base: "1rem" }}
-          padding={{base: "3rem 1rem"}}
-          width={{base: "70%"}}
-          maxWidth={{base: "1024px"}}
+          padding={{ base: "3rem 1rem" }}
+          width={{ base: "70%" }}
+          maxWidth={{ base: "1024px" }}
           flexDirection="column"
-          flex="1 1 50%"
-        >
+          flex="1 1 50%">
           <chakra.h1
             width="fit-content"
             border="5px solid #FFFFFF"
             fontSize={{ base: "40px", md: "60px" }}
             fontWeight="900"
-            padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
-          >
+            padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}>
             about me
           </chakra.h1>
           <chakra.div
@@ -112,8 +112,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             width="100%"
             flexWrap="wrap"
             justifyContent="space-evenly"
-            maxWidth="1080px"
-          >
+            maxWidth="1080px">
             <chakra.div
               display="flex"
               flexDirection="column"
@@ -121,40 +120,40 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
               flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
               fontFamily="Lato"
               fontSize="16px"
-              fontWeight="400"
-            >
+              fontWeight="400">
               <chakra.p marginTop="2rem">
-                Why, hello there 👋 I'm Myles - a dev, tutor, and mentor -
-                helping dozens of aspiring devs make the transition into tech. I
-                made my transition to development in 2016, working with
-                different languages, frameworks, and libraries throughout the
-                years.
+                {[
+                  "Why, hello there 👋 I'm Myles - a dev, tutor, and mentor -",
+                  "helping dozens of aspiring devs make the transition into tech. I",
+                  "made my transition to development in 2016, working with",
+                  "different languages, frameworks, and libraries throughout the",
+                  "years.",
+                ].join(" ")}
               </chakra.p>
               <chakra.p marginTop="1rem">
-                Below is a list of the web tech that I've grown happy to use,
-                but it is not exhaustive. I've also worked with Ruby, C++, C#,
-                Python, and Rust, along with a few popular libraries for those
-                languages - such as Rails(Ruby) and Django(Python).
+                {[
+                  "Below is a list of the web tech that I've grown happy to use,",
+                  "but it is not exhaustive. I've also worked with Ruby, C++, C#,",
+                  "Python, and Rust, along with a few popular libraries for those",
+                  "languages - such as Rails(Ruby) and Django(Python).",
+                ].join(" ")}
               </chakra.p>
               <chakra.h1
                 marginTop="1rem"
                 fontFamily="Lato"
                 fontSize="24px"
-                fontWeight="900"
-              >
-                my current preferred tech
+                fontWeight="900">
+                {"my current preferred tech"}
               </chakra.h1>
               <chakra.div
                 display="flex"
                 justifyContent="center"
-                alignItems="center"
-              >
+                alignItems="center">
                 <chakra.ul
                   display="flex"
                   flexWrap="wrap"
                   listStylePosition="inside"
-                  listStyleType="none"
-                >
+                  listStyleType="none">
                   <List>
                     <Icon as={FaReact} color="#5ADAFD" marginRight="0.5em" />
                     React
@@ -212,27 +211,30 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
               justifyContent="space-around"
               alignItems="center"
               flexBasis={{ base: "100%", sm: "100%", md: "50%" }}
-              fontFamily="Lato"
-            >
+              fontFamily="Lato">
               <chakra.div
                 margin={{ base: "0rem 0rem", sm: "1rem 0rem" }}
                 backgroundImage="guitar-dude.jpg"
                 backgroundPosition="top"
                 backgroundSize="cover"
                 width="100%"
-                boxSize={{base: "200px", md: "300px"}}
+                boxSize={{ base: "200px", md: "300px" }}
                 border="5px solid #FFFFFF"
                 borderRadius="50%"
               />
               <chakra.div>
                 <chakra.p fontWeight="16px">
-                  In my journey of knowledge growth, I'm also delving into Web3
-                  technologies such as Solidity and smart contract development
-                  on the Ethereum blockchain.
+                  {[
+                    "In my journey of knowledge growth, I'm also delving into Web3",
+                    "technologies such as Solidity and smart contract development",
+                    "on the Ethereum blockchain.",
+                  ].join(" ")}
                 </chakra.p>
                 <chakra.p fontWeight="16px" marginTop="1rem">
-                  If you've got any questions, concerns, or otherwise useful and
-                  unuseful comments, feel free to send a DM on Twitter 😀
+                  {[
+                    "If you've got any questions, concerns, or otherwise useful and",
+                    "unuseful comments, feel free to send a DM on Twitter 😀",
+                  ].join(" ")}
                 </chakra.p>
               </chakra.div>
             </chakra.div>
@@ -246,8 +248,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
         alignItems="center"
         background="url(altumcode-unsplash.jpg) fixed"
         backgroundPosition="center"
-        backgroundSize="cover"
-      >
+        backgroundSize="cover">
         <chakra.div
           display="flex"
           height="100%"
@@ -256,8 +257,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
           flexDirection="column"
           fontFamily="Lato"
           color="white"
-          alignItems="center"
-        >
+          alignItems="center">
           <chakra.div
             display="flex"
             width="100%"
@@ -268,15 +268,13 @@ const AboutMe: React.FC<AboutMeProps> = ({ ...props }) => {
             background="rgba(0, 0, 0, 0.7)"
             boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
             backdropFilter="blur(5px)"
-            border="1px solid rgba(0, 0, 0, 0.15)"
-          >
+            border="1px solid rgba(0, 0, 0, 0.15)">
             <chakra.h1
               width="fit-content"
               padding={{ base: "0rem 1rem", sm: "0rem 1rem" }}
               fontSize={{ base: "32px", sm: "24px", md: "32px" }}
               textAlign="center"
-              fontWeight="900"
-            >
+              fontWeight="900">
               achievements unlocked
             </chakra.h1>
           </chakra.div>

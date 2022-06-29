@@ -1,8 +1,8 @@
 /**
  * File: /src/components/Welcome.tsx
  * Project: portfolio
- * Purpose: This will be shown in index.tsx and will be the primary landing 
- *          page. 
+ * Purpose: This will be shown in index.tsx and will be the primary landing
+ *          page.
  *
  * @author Myles Berueda
  * @date   Saturday November 20th 2021
@@ -37,7 +37,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       id="home"
       display="flex"
       height="100vh"
-      padding={{base: "0.5rem"}}
+      padding={{ base: "0.5rem" }}
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
@@ -64,7 +64,7 @@ const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
           fontWeight="400"
           textAlign="center"
         >
-          I'm a{" "}
+          {"I'm a "}
           <chakra.span
             backgroundColor="black"
             marginRight="0.5em"
