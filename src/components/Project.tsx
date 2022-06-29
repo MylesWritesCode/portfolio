@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import { chakra, Box as ChakraBox, BoxProps, Icon } from "@chakra-ui/react";
+import { Icon, Tooltip } from "@chakra-ui/react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { ImageWithModal } from "./ImageWithModal";
 
 export interface ProjectProps {
   title: string;
@@ -9,9 +10,8 @@ export interface ProjectProps {
   description: string;
   link?: string;
   github?: string;
+  reverse?: boolean;
 }
-
-export const Box = motion<BoxProps>(ChakraBox);
 
 const Project: React.FC<ProjectProps> = ({
   title,
@@ -19,32 +19,59 @@ const Project: React.FC<ProjectProps> = ({
   description,
   link,
   github,
+  reverse,
   ...props
 }) => {
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div
-      className="flex m-w-full h-96 my-4 bg-zinc-800 select-none"
+      className={[
+        "flex w-full h-full my-4 bg-zinc-800 select-none",
+        `${reverse && "flex-row-reverse"}`,
+      ].join(" ")}
       onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
-      <div className="relative basis-2/3">
-        <img src={img} className="relative h-full w-full object-cover" />
-      </div>
+      onMouseLeave={() => setIsHovering(false)}>
+      {/* <div className="overflow-hidden bg-transparent basis-2/3">
+        <img
+          src={img}
+          className="h-full w-full object-contain"
+          alt="project-image"
+        />
+      </div> */}
+      <ImageWithModal className="basis-2/3" href={img} />
       <div className="flex flex-col py-6 px-8 justify-between items-center basis-1/3">
         <h1 className="font-bold">{title}</h1>
         <div>{description}</div>
-        <div>
-          {github && (
-            <a href={github} target="_blank">
-              <Icon as={FaGithub} marginRight="0.5rem" />
-            </a>
+        <div className="flex w-full justify-between items-center stretch">
+          {(github || link) && (
+            <div>
+              <p>links</p>
+            </div>
           )}
-          {link && (
-            <a href={link} target="_blank">
-              <Icon as={FaLink} />
-            </a>
-          )}
+          <div className="flex gap-2">
+            {github && (
+            <Tooltip label="find the code" placement="bottom">
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="flex justify-center items-center p-2 hover:bg-indigo-600 hover:rounded transition-all ease-in duration-250">
+                <Icon as={FaGithub} />
+              </a>
+              </Tooltip>
+            )}
+            {link && (
+            <Tooltip label="check out the demo" placement="bottom">
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                className="flex justify-center items-center p-2 hover:bg-indigo-600 hover:rounded transition-all ease-in">
+                <Icon as={FaLink} />
+              </a>
+              </Tooltip>
+            )}
+          </div>
         </div>
       </div>
     </div>

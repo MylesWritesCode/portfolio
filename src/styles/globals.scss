@@ -52,3 +52,7 @@ a {
     transform: rotate(360deg);
   }
 }
+
+.img-container {
+  transition: scale 2s ease-in;
+}
