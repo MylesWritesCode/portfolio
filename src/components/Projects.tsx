@@ -23,11 +23,16 @@ interface ProjectsProps {}
 const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
   const projects: ProjectProps[] = [
     {
+      title: "Chat with WebSockets",
+      img: "/web-chat-demo.webm",
+      description: "A small chat app using Rust for the backend server and React for the frontend",
+      github: "https://github.com/MylesWritesCode/web-chat",
+    },
+    {
       title: "Snake!",
       img: "/snake-with-wasm.jpg",
       description: "Built with Rust into WASM, with a React frontend",
       github: "https://github.com/MylesWritesCode/snake",
-      // link: "https://fm-order-summary-component-omega.vercel.app/",
     },
     {
       title: "Order Summary",

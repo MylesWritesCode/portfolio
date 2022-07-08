@@ -31,13 +31,6 @@ const Project: React.FC<ProjectProps> = ({
       ].join(" ")}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}>
-      {/* <div className="overflow-hidden bg-transparent basis-2/3">
-        <img
-          src={img}
-          className="h-full w-full object-contain"
-          alt="project-image"
-        />
-      </div> */}
       <ImageWithModal className="basis-2/3" href={img} />
       <div className="flex flex-col py-6 px-8 justify-between items-center basis-1/3">
         <h1 className="font-bold">{title}</h1>

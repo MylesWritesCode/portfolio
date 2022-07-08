@@ -28,17 +28,29 @@ export function ImageWithModal({ className, href, alt }: ImageWithModalProps) {
 
   return (
     <div
-      className={["img-container", modalClasses].join(" ")}
+      className={["img-container cursor-pointer", modalClasses].join(" ")}
       onClick={() => setIsOpen(!isOpen)}>
-      <img
-        className={[
-          "h-full w-full",
-          `${isOpen ? "object-contain" : "object-cover"}`,
-        ].join(" ")}
-        src={href}
-        alt={alt || "image"}
-        onClick={() => setIsOpen(!isOpen)}
-      />
+      {href.substring(href.lastIndexOf("."), href.length) === ".webm" ? (
+        <video
+          controls
+          className={[
+            "h-full w-full",
+            `${isOpen ? "object-contain" : "object-cover"}`,
+          ].join(" ")}
+          onClick={() => setIsOpen(!isOpen)}>
+          <source src={href} type="video/webm" />
+        </video>
+      ) : (
+        <img
+          className={[
+            "h-full w-full",
+            `${isOpen ? "object-contain" : "object-cover"}`,
+          ].join(" ")}
+          src={href}
+          alt={alt || "image"}
+          onClick={() => setIsOpen(!isOpen)}
+        />
+      )}
     </div>
   );
 }
