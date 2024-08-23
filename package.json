@@ -8,25 +8,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.7.2",
-    "@emotion/react": "^11.7.0",
-    "@emotion/styled": "^11",
-    "framer-motion": "^5.3.3",
+    "@chakra-ui/react": "^1.8.9",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "framer-motion": "^5.6.0",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "sass": "^1.43.5"
+    "react-icons": "^4.12.0",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.9.3",
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
-    "autoprefixer": "^10.4.7",
-    "eslint": "<8.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^7.32.0",
     "eslint-config-next": "12.0.4",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
     "typescript": "4.5.2"
   },
   "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"

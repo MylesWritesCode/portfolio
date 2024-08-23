@@ -9,16 +9,16 @@ importers:
   .:
     dependencies:
       '@chakra-ui/react':
-        specifier: ^1.7.2
+        specifier: ^1.8.9
         version: 1.8.9(@emotion/react@11.13.3(@types/react@17.0.37)(react@17.0.2))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@17.0.37)(react@17.0.2))(@types/react@17.0.37)(react@17.0.2))(@types/react@17.0.37)(framer-motion@5.6.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@emotion/react':
-        specifier: ^11.7.0
+        specifier: ^11.13.3
         version: 11.13.3(@types/react@17.0.37)(react@17.0.2)
       '@emotion/styled':
-        specifier: ^11
+        specifier: ^11.13.0
         version: 11.13.0(@emotion/react@11.13.3(@types/react@17.0.37)(react@17.0.2))(@types/react@17.0.37)(react@17.0.2)
       framer-motion:
-        specifier: ^5.3.3
+        specifier: ^5.6.0
         version: 5.6.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       next:
         specifier: 12.0.4
@@ -30,14 +30,14 @@ importers:
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
       react-icons:
-        specifier: ^4.3.1
+        specifier: ^4.12.0
         version: 4.12.0(react@17.0.2)
       sass:
-        specifier: ^1.43.5
+        specifier: ^1.77.8
         version: 1.77.8
     devDependencies:
       '@netlify/plugin-nextjs':
-        specifier: ^4.9.3
+        specifier: ^4.41.3
         version: 4.41.3(encoding@0.1.13)
       '@types/node':
         specifier: 16.11.10
@@ -46,19 +46,19 @@ importers:
         specifier: 17.0.37
         version: 17.0.37
       autoprefixer:
-        specifier: ^10.4.7
+        specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.41)
       eslint:
-        specifier: <8.0.0
+        specifier: ^7.32.0
         version: 7.32.0
       eslint-config-next:
         specifier: 12.0.4
         version: 12.0.4(eslint@7.32.0)(next@12.0.4(@babel/core@7.25.2)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(sass@1.77.8))(typescript@4.5.2)
       postcss:
-        specifier: ^8.4.14
+        specifier: ^8.4.41
         version: 8.4.41
       tailwindcss:
-        specifier: ^3.1.4
+        specifier: ^3.4.10
         version: 3.4.10
       typescript:
         specifier: 4.5.2
@@ -5664,7 +5664,7 @@ snapshots:
       eslint: 7.32.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.29.1(eslint@7.32.0))(eslint@7.32.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@7.32.0)
       eslint-plugin-react: 7.35.0(eslint@7.32.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@7.32.0)
@@ -5687,7 +5687,7 @@ snapshots:
     dependencies:
       debug: 4.3.6
       eslint: 7.32.0
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.8
@@ -5706,7 +5706,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1)(eslint@7.32.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@4.33.0(eslint@7.32.0)(typescript@4.5.2))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@7.32.0))(eslint@7.32.0))(eslint@7.32.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
