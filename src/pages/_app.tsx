@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Myles Berueda | Portfolio</title>
+        <link rel="me" href="https://mstdn.social/@mylesberueda" />
       </Head>
       <ChakraProvider>
         <div data-spy="scroll" data-target="#navbar-scroll-spy" data-offset="0">
