@@ -22,11 +22,11 @@ import {
 import {
   FaHome,
   FaGithub,
-  FaTwitter,
-  FaBuffer,
+  FaMastodon,
   FaUserAstronaut,
   FaVial,
   FaRegNewspaper,
+  FaLinkedin,
 } from "react-icons/fa";
 
 interface MenuProps { }
@@ -99,13 +99,18 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
       </chakra.div>
       <chakra.div display="flex" flexDirection="column">
         <Tooltip label="github.com/myleswritescode" placement="right">
-          <chakra.a href="https://github.com/myleswritescode" target="_blank">
+          <chakra.a href="https://github.com/myleswritescode" rel="me" target="_blank">
             <Icon as={FaGithub} />
           </chakra.a>
         </Tooltip>
         <Tooltip label="@mylesberueda@mstdn.social" placement="right">
           <chakra.a href="https://mstdn.social/@mylesberueda" rel="me" target="_blank">
-            <Icon as={FaTwitter} />
+            <Icon as={FaMastodon} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="linkedin.com/in/myles-berueda" placement="right">
+          <chakra.a href="https://linkedin.com/in/myles-berueda" rel="me" target="_blank">
+            <Icon as={FaLinkedin} />
           </chakra.a>
         </Tooltip>
       </chakra.div>
