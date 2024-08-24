@@ -28,6 +28,7 @@ import {
   FaRegNewspaper,
   FaLinkedin,
 } from "react-icons/fa";
+import { SiOnlyfans } from "react-icons/si";
 
 interface MenuProps { }
 
@@ -108,9 +109,15 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
             <Icon as={FaMastodon} />
           </chakra.a>
         </Tooltip>
+
         <Tooltip label="linkedin.com/in/myles-berueda" placement="right">
           <chakra.a href="https://linkedin.com/in/myles-berueda" rel="me" target="_blank">
             <Icon as={FaLinkedin} />
+          </chakra.a>
+        </Tooltip>
+        <Tooltip label="OnlyFans" placement="right">
+          <chakra.a href="./onlyfans.gif" target="_blank">
+            <Icon as={SiOnlyfans} />
           </chakra.a>
         </Tooltip>
       </chakra.div>
