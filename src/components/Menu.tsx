@@ -29,7 +29,7 @@ import {
   FaRegNewspaper,
 } from "react-icons/fa";
 
-interface MenuProps {}
+interface MenuProps { }
 
 const Icon = chakra(ChakraIcon, {
   baseStyle: {
@@ -55,7 +55,7 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
       display="flex"
       position="fixed"
       width="4rem"
-      height={{base: "100vh", sm: "100%"}}
+      height={{ base: "100vh", sm: "100%" }}
       padding="1rem 0rem"
       left="0"
       top="0"
@@ -103,8 +103,8 @@ const Menu: React.FC<MenuProps> = ({ ...props }) => {
             <Icon as={FaGithub} />
           </chakra.a>
         </Tooltip>
-        <Tooltip label="twitter.com/mylescodesemoji" placement="right">
-          <chakra.a href="https://twitter.com/mylescodesemoji" target="_blank">
+        <Tooltip label="@mylesberueda@mstdn.social" placement="right">
+          <chakra.a href="https://mstdn.social/@mylesberueda" rel="me" target="_blank">
             <Icon as={FaTwitter} />
           </chakra.a>
         </Tooltip>
